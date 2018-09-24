@@ -26,11 +26,23 @@
 
   `docker-compose up -d`
 
-4. rails server起動
+4. config/databases.ymlを修正する
+
+  ```config/database.yml
+  default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  host: db
+  ```
+
+5. rails server起動
 
   `docker-compose run web rake db:create`
 
-5. コンテナ停止
+6. コンテナ停止
 
   `docker-compose down`
 
