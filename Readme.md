@@ -34,20 +34,16 @@
 
   `docker-compose down`
 
-## app開発時
-1. コンテナ起動
+## app開発時用
+- コンテナ起動
 
   `docker-compose up -d`
 
-2. rails server起動
-
-  `docker-compose run web`
-
-3. コンテナ停止
+- コンテナ停止
 
   `docker-compose down`
 
-## コンテナへ入りたい時
+## コンテナへ入りたい時用
 - appコンテナへ
 
   `docker-compose exec web bash`
